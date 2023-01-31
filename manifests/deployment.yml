@@ -1,19 +1,19 @@
 apiversion: apps/v1
 kind: Deployment
 metadata:
-  name: iotdeviceapi
+  name: sauravcluster
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: iotdeviceapi
+      app: sauravcluster
   template:
     metadata:
       labels:
-        app: iotdeviceapi
+        app: sauravcluster
     spec:
       containers:
-      - name: iotdeviceapi
-        image: iotdeviceapiacr045.azurecr.io/iotdeviceapi
+      - name: sauravcluster
+        image: sauravclusteracr.azurecr.io/sauravcluster
         ports:
         - containerPort: 80
